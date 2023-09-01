@@ -33,7 +33,7 @@ router.route('/seats').post((req ,res) => {
         db.seats.push(newSeat);
         res.json({ message: 'OK'});
     } else {
-        res.status(400).json({ message: 'Bad Request - all fields required'});
+        res.status(400).json({ message: "The slot is already taken..." });
     }
 });
 
